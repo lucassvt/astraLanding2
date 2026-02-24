@@ -69,15 +69,39 @@ export function AppShowcase() {
             </motion.div>
 
             <motion.div variants={fadeInRight} className="order-1 lg:order-2">
-              <div className="device-frame relative glow-purple">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`${basePath}/images/screenshot-community.png`}
-                  alt="ASTRA Comunidad - Avatares y Rankings"
-                  className="w-full h-auto"
-                />
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-astra-bg-deep/40 via-transparent to-transparent pointer-events-none" />
+              {/* Pyramid layout: 1 top center, 2 bottom */}
+              <div className="flex flex-col items-center gap-4">
+                {/* Top */}
+                <div className="relative w-48 sm:w-56">
+                  <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-astra-cyan/60 via-astra-purple/40 to-astra-accent/60 blur-md opacity-80" />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`${basePath}/images/profile-1.webp`}
+                    alt="Perfil vendedor 1"
+                    className="relative rounded-2xl w-full h-auto border border-astra-cyan/30 shadow-lg shadow-astra-cyan/20"
+                  />
+                </div>
+                {/* Bottom row */}
+                <div className="flex gap-4">
+                  <div className="relative w-40 sm:w-48">
+                    <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-astra-purple/60 via-astra-accent/40 to-astra-cyan/40 blur-md opacity-80" />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`${basePath}/images/profile-2.webp`}
+                      alt="Perfil vendedor 2"
+                      className="relative rounded-2xl w-full h-auto border border-astra-purple/30 shadow-lg shadow-astra-purple/20"
+                    />
+                  </div>
+                  <div className="relative w-40 sm:w-48">
+                    <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-astra-accent/60 via-astra-cyan/40 to-astra-purple/40 blur-md opacity-80" />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`${basePath}/images/profile-3.webp`}
+                      alt="Perfil vendedor 3"
+                      className="relative rounded-2xl w-full h-auto border border-astra-accent/30 shadow-lg shadow-astra-accent/20"
+                    />
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
