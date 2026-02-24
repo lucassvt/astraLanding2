@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/lib/animations";
-import Image from "next/image";
 import { Monitor, Smartphone, Users, ShoppingCart } from "lucide-react";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export function AppShowcase() {
   return (
@@ -69,11 +70,10 @@ export function AppShowcase() {
 
             <motion.div variants={fadeInRight} className="order-1 lg:order-2">
               <div className="device-frame relative glow-purple">
-                <Image
-                  src="/images/screenshot-community.png"
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${basePath}/images/screenshot-community.png`}
                   alt="ASTRA Comunidad - Avatares y Rankings"
-                  width={800}
-                  height={500}
                   className="w-full h-auto"
                 />
                 {/* Overlay gradient */}
@@ -86,11 +86,10 @@ export function AppShowcase() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div variants={fadeInLeft}>
               <div className="device-frame relative glow-cyan">
-                <Image
-                  src="/images/screenshot-catalog.png"
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${basePath}/images/screenshot-catalog.png`}
                   alt="ASTRA Catálogo - Productos para mascotas"
-                  width={800}
-                  height={500}
                   className="w-full h-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-astra-bg-deep/40 via-transparent to-transparent pointer-events-none" />

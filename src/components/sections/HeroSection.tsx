@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Zap, Shield } from "lucide-react";
 import { REGISTER_URL } from "@/lib/constants";
-import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from "@/lib/animations";
-import Image from "next/image";
+import { fadeInLeft, fadeInRight, staggerContainer } from "@/lib/animations";
 
 export function HeroSection() {
   return (
@@ -122,12 +121,11 @@ export function HeroSection() {
 
               {/* Main image */}
               <div className="relative w-full h-full rounded-3xl overflow-hidden animate-float">
-                <Image
-                  src="/images/hero-cat.webp"
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/hero-cat.webp`}
                   alt="ASTRA mascota astronauta"
-                  fill
-                  className="object-contain drop-shadow-2xl"
-                  priority
+                  className="absolute inset-0 w-full h-full object-contain drop-shadow-2xl"
                 />
               </div>
 
