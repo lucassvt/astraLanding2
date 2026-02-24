@@ -123,7 +123,7 @@ export function HeroSection() {
               {/* Main image */}
               <div className="relative w-full h-full rounded-3xl overflow-hidden animate-float">
                 <Image
-                  src="/images/hero-cat.png"
+                  src="/images/hero-cat.webp"
                   alt="ASTRA mascota astronauta"
                   fill
                   className="object-contain drop-shadow-2xl"
